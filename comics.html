@@ -3,28 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SK Publication | Home</title>
+  <title>Comics Store - SK Publication</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #fff8dc, #f0f8ff);
+      font-family: "Comic Sans MS", "Poppins", sans-serif;
+    }
+    h1, h2 {
+      color: #ff4500;
+      text-shadow: 2px 2px #ffe;
+    }
+    .comics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .comic {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .comic:hover {
+      transform: scale(1.05);
+    }
+    .comic img {
+      width: 200px;
+      height: 250px;
+      border-radius: 10px;
+    }
+    .buy-btn {
+      background: #ffcc00;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .buy-btn:hover {
+      background: #ff4500;
+      color: white;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>SK Publication</h1>
+    <h1>Our Comics Store</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="comics.html">Comics</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <h2>Welcome to SK Publication!</h2>
-    <p>We create original comics for just ₹5 each — handmade with love by Kritansh and Shresth!</p>
-    <img src="https://via.placeholder.com/600x300?text=Comic+Cover" alt="Comic Cover" />
+    <h2>Choose Your Favorite Comics!</h2>
+    <section class="comics">
+      <div class="comic">
+        <img src="https://via.placeholder.com/200x250?text=The+Batatas+S1" alt="The Batatas Season 1" />
+        <p><b>The Batatas: Season 1</b><br>₹5</p>
+        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
+      </div>
+      <div class="comic">
+        <img src="https://via.placeholder.com/200x250?text=The+Batatas+S2" alt="The Batatas Season 2" />
+        <p><b>The Batatas: Season 2</b><br>₹5</p>
+        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
+      </div>
+      <div class="comic">
+        <img src="https://via.placeholder.com/200x250?text=The+Batatas+S3" alt="The Batatas Season 3" />
+        <p><b>The Batatas: Season 3</b><br>₹5</p>
+        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
+      </div>
+      <div class="comic">
+        <img src="https://via.placeholder.com/200x250?text=Zero+Point+S1" alt="Zero Point Season 1" />
+        <p><b>Zero Point: Season 1</b><br>₹5</p>
+        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
+      </div>
+      <div class="comic">
+        <img src="https://via.placeholder.com/200x250?text=Zero+Point+S2" alt="Zero Point Season 2" />
+        <p><b>Zero Point: Season 2</b><br>₹5</p>
+        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
+      </div>
+      <div class="comic">
+        <img src="https://via.placeholder.com/200x250?text=Stickman+Manga" alt="Stickman Manga" />
+        <p><b>Stickman Manga</b><br>₹5</p>
+        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
+      </div>
+      <div class="comic">
+        <img src="https://via.placeholder.com/200x250?text=Blox+Fruit" alt="Blox Fruit Comics" />
+        <p><b>Blox Fruit Comics</b><br>₹5</p>
+        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
+      </div>
+      <div class="comic">
+        <img src="https://via.placeholder.com/200x250?text=Humanity+VS+Zombies" alt="Humanity VS Zombies" />
+        <p><b>Humanity VS Zombies</b><br>₹5</p>
+        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
+      </div>
+      <div class="comic">
+        <img src="https://via.placeholder.com/200x250?text=Civilization+Under+the+Sofa" alt="Civilization under the Sofa" />
+        <p><b>Civilization under the Sofa</b><br>₹5</p>
+        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>© 2026 SK Publication | Made with ❤️ in Universal School</p>
+    <p>© 2026 SK Publication | Bright ideas, big fun!</p>
   </footer>
 </body>
 </html>
