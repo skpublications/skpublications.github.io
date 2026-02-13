@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - SK Publication</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffefd5, #e0ffff);
+      font-family: "Comic Sans MS", "Poppins", sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: #ff4500;
+      text-shadow: 1px 1px #fff;
+    }
+    form {
+      background: #fff;
+      display: inline-block;
+      text-align: left;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin-top: 2rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+    button {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    button:hover {
+      background: #ff4500;
+      color: #fff;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+  </header>
+
+  <main>
+    <p>Fill in your details below to get your favorite comic delivered anywhere!</p>
+    <form>
+      <label for="name">👦 Full Name:</label>
+      <input type="text" id="name" placeholder="Your name" required>
+
+      <label for="comic">📚 Choose Your Comic:</label>
+      <select id="comic">
+        <option>The Batatas: Season 1</option>
+        <option>The Batatas: Season 2</option>
+        <option>The Batatas: Season 3</option>
+        <option>Zero Point: Season 1</option>
+        <option>Zero Point: Season 2</option>
+        <option>Stickman Manga</option>
+        <option>Blox Fruit Comics</option>
+        <option>Humanity VS Zombies</option>
+        <option>Civilization under the Sofa</option>
+      </select>
+
+      <label for="address">🏠 Delivery Address:</label>
+      <textarea id="address" rows="4" placeholder="Where should we deliver your comic?"></textarea>
+
+      <label for="email">✉️ Email:</label>
+      <input type="email" id="email" placeholder="you@example.com">
+
+      <label for="phone">📞 Phone:</label>
+      <input type="tel" id="phone" placeholder="Your phone number">
+
+      <button type="submit">Place Order</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2026 SK Publication | Thank you for reading with us! 🌈</p>
+  </footer>
+</body>
+</html>
