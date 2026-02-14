@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkout - SK Publication</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout – SK Publication</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      background: linear-gradient(135deg, #ffefd5, #e0ffff);
-      font-family: "Comic Sans MS", "Poppins", sans-serif;
-      text-align: center;
-    }
-    h1 {
-      color: #ff4500;
-      text-shadow: 1px 1px #fff;
-    }
     form {
       background: #fff;
       display: inline-block;
@@ -23,33 +14,14 @@
       border-radius: 15px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       margin-top: 2rem;
+      max-width: 400px;
+      width: 90%;
     }
-    label {
-      font-weight: bold;
-    }
+    label {font-weight:bold;}
     input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-family: inherit;
-    }
-    button {
-      background: #ffcc00;
-      color: #000;
-      border: none;
-      padding: 10px 25px;
-      border-radius: 25px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    button:hover {
-      background: #ff4500;
-      color: #fff;
-      transform: scale(1.1);
+      width:100%; padding:10px; margin:8px 0;
+      border-radius:8px; border:1px solid #ccc;
+      font-family:inherit;
     }
   </style>
 </head>
@@ -59,18 +31,19 @@
   </header>
 
   <main>
-    <p>Fill in your details below to get your favorite comic delivered anywhere!</p>
-    <form>
+    <p>Fill in your details below to get your comic delivered anywhere on Earth 🌍</p>
+
+    <form id="orderForm">
       <label for="name">👦 Full Name:</label>
       <input type="text" id="name" placeholder="Your name" required>
 
       <label for="comic">📚 Choose Your Comic:</label>
       <select id="comic">
-        <option>The Batatas: Season 1</option>
-        <option>The Batatas: Season 2</option>
-        <option>The Batatas: Season 3</option>
-        <option>Zero Point: Season 1</option>
-        <option>Zero Point: Season 2</option>
+        <option>The Batatas Season 1</option>
+        <option>The Batatas Season 2</option>
+        <option>The Batatas Season 3</option>
+        <option>Zero Point Season 1</option>
+        <option>Zero Point Season 2</option>
         <option>Stickman Manga</option>
         <option>Blox Fruit Comics</option>
         <option>Humanity VS Zombies</option>
@@ -78,7 +51,7 @@
       </select>
 
       <label for="address">🏠 Delivery Address:</label>
-      <textarea id="address" rows="4" placeholder="Where should we deliver your comic?"></textarea>
+      <textarea id="address" rows="4" placeholder="Your address here..."></textarea>
 
       <label for="email">✉️ Email:</label>
       <input type="email" id="email" placeholder="you@example.com">
@@ -88,10 +61,30 @@
 
       <button type="submit">Place Order</button>
     </form>
+
+    <p id="thanks" style="display:none; font-size:1.3rem; color:#ff4500; margin-top:2rem;">🎉 Thank you! Your order has been placed (successfully imaginary)! 📦</p>
   </main>
 
   <footer>
     <p>© 2026 SK Publication | Thank you for reading with us! 🌈</p>
   </footer>
+
+  <script>
+    // auto-select comic from query string
+    const params = new URLSearchParams(window.location.search);
+    const selected = params.get("comic");
+    if (selected) {
+      const dropdown = document.getElementById("comic");
+      for (let opt of dropdown.options)
+        if (opt.text.replace(/\s+/g,' ').trim() === decodeURIComponent(selected).replace(/\s+/g,' ').trim())
+          dropdown.value = opt.text;
+    }
+    // fake order message
+    document.getElementById("orderForm").addEventListener("submit", e=>{
+      e.preventDefault();
+      e.target.style.display="none";
+      document.getElementById("thanks").style.display="block";
+    });
+  </script>
 </body>
 </html>
