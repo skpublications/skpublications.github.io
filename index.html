@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SK Publication | Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero {
+      background: linear-gradient(120deg, #ffefd5, #f0f8ff);
+      padding: 3rem 1rem;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+    .hero img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 15px;
+      margin-top: 1rem;
+    }
+    .btn-row {
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -18,13 +37,31 @@
   </header>
 
   <main>
-    <h2>Welcome to SK Publication!</h2>
-    <p>We create original comics for just ₹5 each — handmade with love by Kritansh and Shresth!</p>
-    <img src="https://via.placeholder.com/600x300?text=Comic+Cover" alt="Comic Cover" />
+    <div class="hero">
+      <h2>Welcome to SK Publication! 🎉</h2>
+      <p>Step into a world of laughter, imagination, and epic comic adventures!  
+      <b>SK Publication</b> brings you stories created by <b>Kritansh</b> and <b>Shresth</b>, made especially for kids who dream big and love reading.  
+      Every page is full of heroes, funny villains, and silly surprises — all for just ₹20 per comic!</p>
+
+      <img src="https://via.placeholder.com/500x250?text=Welcome+to+SK+Publication" alt="Welcome Banner">
+
+      <div class="btn-row">
+        <a href="comics.html"><button class="buy-btn">🦸‍♂️ Explore Comics</button></a>
+        <a href="comics.html"><button class="buy-btn">📚 Visit Our Store</button></a>
+      </div>
+    </div>
+
+    <section>
+      <h2>Our Comic Worlds 🌍</h2>
+      <p>Meet <b>The Batatas</b>, the potato heroes who save their village from chaos!  
+      Dive into <b>Zero Point</b>, a science adventure through time.  
+      Join <b>Stickman</b> in his manga journey, and face off in <b>Humanity VS Zombies!</b>  
+      Every comic is drawn and written with love by young creators at <b>Universal School</b>.</p>
+    </section>
   </main>
 
   <footer>
-    <p>© 2026 SK Publication | Made with ❤️ in Universal School</p>
+    <p>© 2026 SK Publication | Comics made by kids, for kids!</p>
   </footer>
 </body>
 </html>
