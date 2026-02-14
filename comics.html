@@ -1,59 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comics Store - SK Publication</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      background: linear-gradient(135deg, #fff8dc, #f0f8ff);
-      font-family: "Comic Sans MS", "Poppins", sans-serif;
-    }
-    h1, h2 {
-      color: #ff4500;
-      text-shadow: 2px 2px #ffe;
-    }
-    .comics {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .comic {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .comic:hover {
-      transform: scale(1.05);
-    }
-    .comic img {
-      width: 200px;
-      height: 250px;
-      border-radius: 10px;
-    }
-    .buy-btn {
-      background: #ffcc00;
-      border: none;
-      color: #000;
-      font-weight: bold;
-      padding: 10px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-      margin-top: 10px;
-      font-size: 1rem;
-      transition: all 0.2s;
-    }
-    .buy-btn:hover {
-      background: #ff4500;
-      color: white;
-      transform: scale(1.1);
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comics Store – SK Publication</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -66,58 +17,37 @@
   </header>
 
   <main>
-    <h2>Choose Your Favorite Comics!</h2>
+    <h2>Pick Your Adventure – Each Only ₹20!</h2>
     <section class="comics">
-      <div class="comic">
-        <img src="https://via.placeholder.com/200x250?text=The+Batatas+S1" alt="The Batatas Season 1" />
-        <p><b>The Batatas: Season 1</b><br>₹5</p>
-        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
-      </div>
-      <div class="comic">
-        <img src="https://via.placeholder.com/200x250?text=The+Batatas+S2" alt="The Batatas Season 2" />
-        <p><b>The Batatas: Season 2</b><br>₹5</p>
-        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
-      </div>
-      <div class="comic">
-        <img src="https://via.placeholder.com/200x250?text=The+Batatas+S3" alt="The Batatas Season 3" />
-        <p><b>The Batatas: Season 3</b><br>₹5</p>
-        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
-      </div>
-      <div class="comic">
-        <img src="https://via.placeholder.com/200x250?text=Zero+Point+S1" alt="Zero Point Season 1" />
-        <p><b>Zero Point: Season 1</b><br>₹5</p>
-        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
-      </div>
-      <div class="comic">
-        <img src="https://via.placeholder.com/200x250?text=Zero+Point+S2" alt="Zero Point Season 2" />
-        <p><b>Zero Point: Season 2</b><br>₹5</p>
-        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
-      </div>
-      <div class="comic">
-        <img src="https://via.placeholder.com/200x250?text=Stickman+Manga" alt="Stickman Manga" />
-        <p><b>Stickman Manga</b><br>₹5</p>
-        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
-      </div>
-      <div class="comic">
-        <img src="https://via.placeholder.com/200x250?text=Blox+Fruit" alt="Blox Fruit Comics" />
-        <p><b>Blox Fruit Comics</b><br>₹5</p>
-        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
-      </div>
-      <div class="comic">
-        <img src="https://via.placeholder.com/200x250?text=Humanity+VS+Zombies" alt="Humanity VS Zombies" />
-        <p><b>Humanity VS Zombies</b><br>₹5</p>
-        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
-      </div>
-      <div class="comic">
-        <img src="https://via.placeholder.com/200x250?text=Civilization+Under+the+Sofa" alt="Civilization under the Sofa" />
-        <p><b>Civilization under the Sofa</b><br>₹5</p>
-        <a href="checkout.html"><button class="buy-btn">Buy</button></a>
-      </div>
+      <script>
+        const comics = [
+          "The Batatas Season 1",
+          "The Batatas Season 2",
+          "The Batatas Season 3",
+          "Zero Point Season 1",
+          "Zero Point Season 2",
+          "Stickman Manga",
+          "Blox Fruit Comics",
+          "Humanity VS Zombies",
+          "Civilization under the Sofa"
+        ];
+        document.write(
+          comics.map(c =>
+            `<div class="comic">
+              <img src="https://via.placeholder.com/200x250?text=${encodeURIComponent(c)}" alt="${c}">
+              <p><b>${c}</b><br>₹20</p>
+              <a href="checkout.html?comic=${encodeURIComponent(c)}">
+                <button class='buy-btn'>Buy</button>
+              </a>
+            </div>`
+          ).join('')
+        );
+      </script>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 SK Publication | Bright ideas, big fun!</p>
+    <p>© 2026 SK Publication | Every comic, a new world of fun!</p>
   </footer>
 </body>
 </html>
